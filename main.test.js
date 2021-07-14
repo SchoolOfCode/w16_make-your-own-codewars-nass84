@@ -30,3 +30,14 @@ test(`maximumSquatAmount returns the maximum amount of Squats the player can do 
   const expected = 60;
   expect(actual).toBe(expected);
 });
+
+
+test(`maximumSquatAmount returns the maximum amount of Squats the player can do in 122 seconds if a squat takes 3 seconds'`, () => {
+  // amount of time
+
+  const time = 122;
+  const singleSquatTime = 3;
+  const actual = maximumSquatAmount(time, singleSquatTime);
+  const expected = 40;
+  expect(actual).toBe(expected);
+});
